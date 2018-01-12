@@ -1,7 +1,21 @@
 <div class="jn-module-topNav" *ngIf="topObj.conf && topObj.conf.items && topObj.conf.items.length > 0">
+    <!-- <div class="jn-module-tabs-bar">
+      <ion-segment [(ngModel)]="jnTopNav" mode="md">
+        <ion-segment-button value="{{idx}}" *ngFor="let tabItem of dataArr; let idx = index" tappable (click)="activeClick(tabItem, idx)">
+          <div class="jn-module-tabs-bar-item-word">{{tabItem.title}}</div>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div [ngSwitch]="jnTopNav">
+      <div *ngFor="let content of viewData;let i = index">
+        <div *ngSwitchCase="i" class="jn-module-tabs-content">
+            <n-template [item]="content.conf" [tempData]="content.data"></n-template>
+        </div>
+      </div>
+    </div> -->
     <div class="jn-module-tabs-bar">
       <div class="jn-module-tabs-bar-item" *ngFor="let tabItem of dataArr; let idx = index">
-        <div class="jn-module-tabs-bar-item-word" [ngClass]="{tabItemActive: (idx === tabActive)}" (click)="activeClick(tabItem, idx)">{{tabItem.title}}</div>
+        <div class="jn-module-tabs-bar-item-word" [ngClass]="{tabItemActive: (idx === tabActive)}" tappable (tap)="activeClick(tabItem, idx)">{{tabItem.title}}</div>
       </div>
     </div>
     <div *ngFor="let content of viewData;let i = index">
@@ -9,5 +23,6 @@
         <n-template [item]="content.conf" [tempData]="content.data"></n-template>
       </div>
     </div>
-
+    
+    
   </div>

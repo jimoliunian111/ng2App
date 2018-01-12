@@ -18,13 +18,14 @@ export class JnTopnavComponent {
   dataArr: any = [];
   viewData: any = [];
   tabItem: Object = {};
+  jnTopNav: any = '0'
   constructor(public ApiProvider: ApiProvider) {
   }
   ionViewDidLoad () {
 
   }
   ngOnInit () {
-    console.log('+++++++++++2', this.topObj)
+    console.log('sssss====')
     if (this.topObj && this.topObj.conf && this.topObj.conf.items && this.topObj.conf.items.length > 0) {
       this.topObj.conf.items.forEach((childItem) => {
         childItem.click = true
@@ -36,9 +37,11 @@ export class JnTopnavComponent {
     }
   }
   activeClick (item, idx) {
-    console.log('aaaaaa', item)
     this.tabItem = item
     this.tabActive = idx
+    if (!item.click) {
+      return
+    }
     this.getTemp(item)
   }
   getTemp (item) {
@@ -58,9 +61,6 @@ export class JnTopnavComponent {
           this.tabItem = item
           this.viewData = []
           this.viewData = this.dataArr
-          console.log('++', this.viewData)
-          console.log('123456789', this.topNavConf)
-          console.log('123654', this.topNavData)
           // this.moduleFlag = true
         }, (err) => {});
       }, (err) => {});

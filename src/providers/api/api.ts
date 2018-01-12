@@ -19,8 +19,9 @@ export class ApiProvider {
               public alertCtrl: AlertController,
               public mApi: ModuleApiProvider,
               public loadingCtrl: LoadingController) {
+                console.log(this.ApiUrl, 'ooooo')
   }
-  ApiUrl: Object = {
+  ApiUrl: object = {
     login: '/v2/ecapi.auth.signin', //登录
     register: '/v2/ecapi.auth.default.signup', //注册
     category: '/v2/ecapi.category.list', //分类
@@ -36,7 +37,7 @@ export class ApiProvider {
     orderList: '/v2/ecapi.order.list',
     addCart: '/v2/ecapi.cart.add'
   }
-  ModuleApi: Object = {
+  ModuleApi: object = {
     homeConf: '/api/v2/app/home.template', //首页配置
     homeConfData: '/api/v2/app/home.data', //首页配置数据
     tempConf: '/api/v2/app/get.template', //模块模板配置

@@ -24,9 +24,9 @@ jn-topnav {
 }
 .jn-module-tabs-bar-item-word {
   max-width: rem(160);
-  height: rem(70);
+  height: rem(80);
   margin: 0 auto;
-  line-height: rem(70);
+  line-height: rem(80);
   text-align: center;
   color: $color-title;
 }
@@ -39,6 +39,7 @@ jn-topnav {
   width: rem(750);
   overflow-x: hidden;
   background: $color-white;
+  transition: all 2.3s;
 }
 .jn-module-tabs-title {
   display: block;
