@@ -1,0 +1,9 @@
+<!-- Generated template for the JnIconComponent component -->
+<div>
+  <div class="nav" *ngIf="item.conf && item.conf.items && item.conf.items.length > 0">
+      <div class="item" *ngFor="let icon of item.conf.items" tappable (click)="ItemClick(icon)">
+        <img src="{{icon.pic}}"/>
+        <div class="text">{{icon.title}}</div>
+      </div>
+    </div>
+</div>

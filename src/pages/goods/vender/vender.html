@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>品牌列表</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="正在刷新...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div>
+    <div *ngFor="let item of homeArr">
+    <div class="brand" *ngIf="item.item_type == 'brand'">
+      <img src="{{item.item_logo}}" />
+    </div>
+    <div class="subject" *ngIf="item.item_type == 'special'">
+      <img src="{{item.item_logo}}" (click)="goSubject(item.item_id)"/>
+    </div>
+    <div class="title" *ngIf="item.item_type == 'title'">
+      <img src="{{item.item_logo}}" />
+    </div>
+    <div class="activity" *ngIf="item.item_type == 'activity'">
+      <img src="{{item.item_logo}}" />
+    </div>
+  </div>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,25 @@
+<!-- Generated template for the JnOrderItemComponent component -->
+<div class="jn-order" *ngIf="item">
+  <div class="jn-order-bar">
+    <div class="jn-order-bar-sn">订单号：{{item.sn}}</div>
+    <div class="jn-order-bar-status">{{item.status_text}}</div>
+  </div>
+  <div class="jn-order-goods-content">
+    <div class="jn-order-goods-item" *ngFor="let good of item.goods" tappable (tap)="goView('ProductPage', {id: good.id})">
+      <div class="jn-order-goods-item-avatar">
+        <img src="{{good.product.photos[0] && good.product.photos[0].thumb}}" />
+      </div>
+      <div class="jn-order-goods-item-desc">
+        <div class="jn-order-goods-item-desc-name">{{good.product.name}}</div>
+        <div class="jn-order-goods-item-desc-price">￥{{good.product_price}}</div>
+        <div class="jn-order-goods-item-desc-num">x{{good.total_amount}}</div>
+      </div>
+    </div>
+
+    <div class="jn-order-total-num">共 {{item.goods_total}} 件商品</div>
+    <div class="jn-order-total-price">实付: <span class="price">￥{{item.total}}</span></div>
+  </div>
+  <div class="jn-order-btn-bar">
+
+  </div>
+</div>

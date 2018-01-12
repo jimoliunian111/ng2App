@@ -1,0 +1,43 @@
+<div class="jn-product" *ngIf="item">
+  <div class="jn-product-item">
+    <div class="jn-product-avatar" tappable (click)="goProduct(item)">
+      <div class="jn-product-avatar-box">
+        <img src="{{item.goods_image}}" />
+        <div class="jn-product-maskForGoods" *ngIf="item.is_sale == 1 && item.goods_stock <= 0">已售罄</div>
+        <div class="jn-product-maskForGoods" *ngIf="item.is_sale == 0">已下架</div>
+      </div>
+    </div>
+    <div class="jn-product-desc">
+      <div class="name">{{item.item_name ? item.item_name : item.goods_name}}</div>
+      <div class="sub-name">{{item.short_name}}</div>
+      <div class="jn-product-tags">
+        <div class="tag" *ngFor="let tag of item.tags">{{tag}}</div>
+      </div>
+      <div class="jn-product-intro">
+        <div class="left" *ngIf="item.goods_yieldly && item.goods_yieldly.length > 0">
+          <p>{{item.goods_yieldly}}</p>
+          <p>产地</p>
+        </div>
+        <div class="right" *ngIf="item.unit_price && item.unit_price.length > 0 && +item.goods_price > 0">
+          <p>{{item.unit_price}}</p>
+          <p>单价</p>
+        </div>
+      </div>
+
+      <div class="jn-product-standard">
+        <div class="price">
+          <span class="price-num">{{+item.goods_price > 0 ? '￥' + item.goods_price : '￥???'}}</span>
+          <span class="price-dis" *ngIf="+item.goods_price < 0">
+                {{+item.goods_price !== -1 ? +item.goods_price === -3 ? sale_start : +item.goods_price === -4 ? '审核后可见' : ' ' : '登录后可见'}}
+                </span>
+        </div>
+      </div>
+    </div>
+    <div class="jn-product-add-disable" *ngIf="(item.goods_stock <= 0 || item.is_sale == 0)">
+      <i class="icon iconfont icon-jia-yuankuang"></i>
+    </div>
+    <div class="jn-product-add" (click)="showNum(item, $event)" *ngIf="(item.goods_stock > 0 && item.is_sale !== 0)">
+      <i class="icon iconfont icon-jia-yuankuang"></i>
+    </div>
+  </div>
+</div>

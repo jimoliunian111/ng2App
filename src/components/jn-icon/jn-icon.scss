@@ -1,0 +1,24 @@
+jn-icon {
+  .nav {
+      display: flex;
+      flex-flow: row nowrap;
+      width: rem(750);
+      padding: 0 rem(40);
+      margin: 0 auto;
+      justify-content: flex-start;
+      .item {
+          flex: 1;
+          overflow: hidden;
+          img {
+              display: block;
+              width: rem(48);
+              margin: 0 auto;
+          }
+          .text {
+              line-height: rem(40);
+              text-align: center;
+              font-size: rem(20);
+          }
+      }
+  }
+}

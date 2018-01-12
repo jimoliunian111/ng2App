@@ -1,0 +1,13 @@
+<div class="jn-module-topNav" *ngIf="topObj.conf && topObj.conf.items && topObj.conf.items.length > 0">
+    <div class="jn-module-tabs-bar">
+      <div class="jn-module-tabs-bar-item" *ngFor="let tabItem of dataArr; let idx = index">
+        <div class="jn-module-tabs-bar-item-word" [ngClass]="{tabItemActive: (idx === tabActive)}" (click)="activeClick(tabItem, idx)">{{tabItem.title}}</div>
+      </div>
+    </div>
+    <div *ngFor="let content of viewData;let i = index">
+      <div class="jn-module-tabs-content"  [ngClass]="{hide: tabActive !== i}">
+        <n-template [item]="content.conf" [tempData]="content.data"></n-template>
+      </div>
+    </div>
+
+  </div>

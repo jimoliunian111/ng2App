@@ -1,0 +1,14 @@
+<div class="jn-cityPage">
+    <div class="jn-cityPage-header">
+      <div class="jn-header-close-cancel" (click)="close()">取消</div>
+    </div>
+    <div class="jn-cityPage-title">当前城市</div>
+    <div class="jn-cityPage-current-city">
+      <div class="jn-cityPage-city-item">{{cityAddress}}</div>
+    </div>
+    <div class="jn-cityPage-title">选择收货城市</div>
+    <div class="jn-cityPage-city-list">
+      <div class="jn-cityPage-city-item" *ngFor="let cityItem of cityList" tappable (click)="cityChoose(cityItem)">{{cityItem.region_name}}</div>
+    </div>
+    <div class="jn-cityPage-desc">我们正努力为更多城市建立服务点，敬请期待</div>
+  </div>

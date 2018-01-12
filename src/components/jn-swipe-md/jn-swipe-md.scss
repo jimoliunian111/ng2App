@@ -1,0 +1,45 @@
+jn-swipe-md {
+    .jn-swipe-md {
+//      width: 100%;
+    }
+
+  .jn-swipe-img-wrap {
+      display: -webkit-box;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      width: rem(750);
+      padding-left: rem(40);
+  }
+  .jn-swipe-md-item {
+      width: rem(325) !important;
+      height: rem(220) !important;
+      margin-right: rem(15);
+      img {
+          width: rem(325);
+      }
+  }
+  .jn-swipe-md-nav {
+        width: rem(750);
+        padding: 0 rem(40);
+        display:flex;
+        flex-flow: row nowrap;
+  }
+  .jn-swipe-md-title {
+      color: #332500;
+      line-height: 12vw;
+      font-size: rem(38);
+      text-align: left;
+      flex: 1;
+  }
+  .jn-swipe-md-nav-right-btn {
+      flex: 1;
+      text-align: right;
+      color: #4D4D4D;
+      font-size: 3.3vw;
+      line-height: 12vw;
+      i {
+        color: #ffaa00;
+        font-size: 4.1vw;
+      }
+    }
+}

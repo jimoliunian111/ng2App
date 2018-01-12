@@ -1,0 +1,15 @@
+<!-- Generated template for the JnSwipeSmComponent component -->
+<div class="jn-swipe-sm">
+  <div class="jn-swipe-sm-item" *ngFor="let imgItem of swipeArr; let idx = index" tappable (click)="ItemClick(imgItem)">
+      <div class="jn-swipe-sm-img-content">
+        <img class="jn-swipe-sm-img-goods" src="{{imgItem.diy ? imgItem.diy.pic ? imgItem.diy.pic : imgItem.goods_image : imgItem.goods_image}}"/>
+      </div>
+      <div class="jn-seipe-sm-desc">
+        <div class="jn-seipe-sm-desc-left"><span>￥</span>{{imgItem.goods_price > 0 ? (imgItem.goods_price) : '???'}}</div>
+        <div class="jn-seipe-sm-desc-right" *ngIf="imgItem.goods_price < 0">
+          {{imgItem.goods_price !== -1 ? imgItem.goods_price === -3 ? sale_start : imgItem.goods_price === -4 ? '审核后可见' : '' : '登录后可见'}}
+        </div>
+      </div>
+      <div class="jn-swipe-sm-text">{{imgItem.diy ? imgItem.diy.title ? imgItem.diy.title : imgItem.goods_name : imgItem.goods_name}}</div>
+  </div>
+</div>

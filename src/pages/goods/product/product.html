@@ -1,0 +1,105 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>商品详情</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div style="display: flex;flex-direction: column;height: 100%;">
+    <div style="flex: 1;position: relative;overflow-y: scroll;">
+      <div class="product-side">
+        <ion-slides (ionSlideDidChange)="slideChanged()">
+          <ion-slide *ngFor="let side of productSides">
+            <img src="{{side}}" class="product-slide-img" />
+          </ion-slide>
+        </ion-slides>
+      </div>
+      <div class="product-title">
+        <div class="product-text">
+          <div class="name">{{productObj && productObj.goods_name}}</div>
+          <div class="sub">{{productObj && productObj.short_name}}</div>
+        </div>
+        <div class="product-favorite">
+          <span class="icon iconfont icon-aixin2" [ngClass]="{favoriteActive: is_like}" tappable (click)="favoriteBtn()"></span>
+        </div>
+      </div>
+      <div class="product-tags">
+        <div class="tag" *ngFor="let tag of tags">{{tag.name}}</div>
+      </div>
+      <div class="product-price" *ngIf="productObj">
+        <div class="price"><span>{{productObj.goods_price == undefined ?
+                                        '加载中...': (productObj.goods_price == -1 ?
+                                                      '登录后可见' : productObj.is_sale == 1 ? (productObj.goods_price === -3?
+                                                        sale_start : productObj.goods_price == -4 ? '审核后可见' : '￥'+productObj.goods_price+'/件'):'商品已下架')
+                                          }}</span><span *ngIf="productObj.goods_price != -1">{{productObj && productObj.unit_price}}</span></div>
+        <div class="brand">{{productObj && productObj.brand_name}}</div>
+      </div>
+
+      <div class="product-special">
+        <div class="special">
+          <span class="icon iconfont icon-duigouzhong"></span>
+          <span>江南市场直供</span>
+        </div>
+        <div class="special">
+          <span class="icon iconfont icon-duigouzhong"></span>
+          <span>买手精选</span>
+        </div>
+        <div class="special">
+          <span class="icon iconfont icon-duigouzhong"></span>
+          <span>一手货源</span>
+        </div>
+        <div class="special">
+          <span class="icon iconfont icon-duigouzhong"></span>
+          <span>物流直送</span>
+        </div>
+      </div>
+
+      <div class="product-pro">
+        <div class="product-pro-title">商品规格</div>
+        <div class="pro" *ngFor="let Nproperty of productObj &&  productObj.non_priority_properties">{{Nproperty.name}}:<span>{{Nproperty.attrs[0].attr_name}}</span></div>
+        <!--<div class="pro">包装仅供参考，货品以实收为准</div>-->
+      </div>
+
+      <div class="product-stock" tappable (click)="goReasult(productObj.suppliers_id, productObj.suppliers_name)">
+        <div class="stock">{{productObj && productObj.suppliers_name}}</div>
+        <div class="company">在售商品 <span> {{productObj && productObj.suppliers_goods > 0 ? productObj.suppliers_goods : 0}}</span><i class="icon iconfont icon-more"></i></div>
+      </div>
+
+      <div class="product-tab" *ngIf="tabs">
+        <div class="product-tab-item" *ngFor="let tabItem of tabs" (click)="tabClick(tabItem)">
+          <div class="text" [ngClass]="{tabActive: tabShow === tabItem.idx}">{{tabItem.name}}</div>
+        </div>
+      </div>
+      <div class="product-html" *ngIf="tabShow === 0"></div>
+
+      <div class="product-desc" *ngIf="tabShow === 1">
+        <img src="http://m.freshjn.com/h5/static/product/details_01.png" />
+        <img src="http://m.freshjn.com/h5/static/product/details_02.png" />
+        <img src="http://m.freshjn.com/h5/static/product/details_03.png" />
+        <img src="http://m.freshjn.com/h5/static/product/details_04.png" />
+        <img src="http://m.freshjn.com/h5/static/product/details_05.png" />
+      </div>
+    </div>
+    <div slot="bottom" class="product-bar" *ngIf="productObj">
+      <!--<div class="presell-hint" v-if="product.sales_model === 'PRE'">
+        【预售商品】 {{product.presell_desc}}
+      </div>-->
+      <div class="cart-icon">
+        <i class="icon iconfont icon-Cart1" aria-hidden="true">
+          <!--<badge :text="cartTotal" class="cart-icon-badge"></badge>-->
+        </i>
+        <p>购物车</p>
+      </div>
+      <div class="cart-item-modify">
+        <i class="icon iconfont icon-jian-xianxingyuankuang"></i>
+        <input type="number" class="item-value" [(ngModel)]="currentNum" />
+        <i class="icon iconfont icon-jia-yuankuang"></i>
+      </div>
+      <div class="product-button" *ngIf="productObj.is_sale === 1 && productObj.goods_stock > 0">加入购物车</div>
+      <div class="product-button" style="background: #AAAAAA;" *ngIf="productObj.is_sale === 1 && productObj.goods_stock <= 0">已售罄</div>
+      <div class="product-button" style="background: #AAAAAA;" *ngIf="productObj.is_sale === 0">已下架</div>
+    </div>
+  </div>
+</ion-content>

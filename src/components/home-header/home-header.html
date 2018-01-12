@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-right clear tappable (click)="choseCity($event)">
+        广州
+        <span class="icon iconfont icon-moreunfold"></span>
+      </button>
+    </ion-buttons>
+    <ion-title tappable (click)="goSearch()">
+      <div class="home-top">
+        <i class="icon iconfont icon-sousuo"></i>
+       请输入您想要采购的物品
+      </div>
+    </ion-title>
+
+    <ion-buttons end tappable (click)="scanQR()">
+      <button ion-button icon-only>
+        <i class="icon iconfont icon-saoyisao"></i>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>

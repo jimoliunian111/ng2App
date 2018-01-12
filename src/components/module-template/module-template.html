@@ -1,0 +1,20 @@
+<div class="module-template" *ngIf="item" [ngStyle]="flexStyle">
+  <banner *ngIf="item.module === 'banner'" [bannerObj]="item"></banner>
+
+  <jn-icon *ngIf="item.module === 'icon'" [item]="item"></jn-icon>
+
+  <jn-goodslist *ngIf="item.module === 'goods'" [goodsObj]="item" [templateData]="tempData"></jn-goodslist>
+
+  <jn-swipe-md *ngIf="item.module === 'swiper-md'" [item]="item"></jn-swipe-md>
+
+  <jn-swipe-sm *ngIf="item.module === 'swiper-sm'" [item]="item" [templateData]="tempData"></jn-swipe-sm>
+
+  <jn-showcase *ngIf="item.module === 'showcase'" [caseObj]="item.conf"></jn-showcase>
+
+  <jn-topnav *ngIf="item.module === 'top-nav'" [topObj]="item" [templateData]="tempData"></jn-topnav>
+
+  <jn-module-tab *ngIf="item.module === 'tab'" [item]="item" [templateData]="tempData"></jn-module-tab>
+  <div *ngFor="let child of item.child">
+    <module-template [item]="child" [tempData]="tempData"></module-template>
+  </div>
+</div>

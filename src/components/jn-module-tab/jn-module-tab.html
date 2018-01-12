@@ -1,0 +1,14 @@
+<div class="jn-module-tabs" *ngIf="item.conf && item.conf.items && item.conf.items.length > 0">
+    <div class="jn-module-tabs-title" *ngIf="item.conf && (item.conf.title != '' || item.conf.sub != '')">
+      <div class="jn-module-tabs-title-text">{{item.conf.title}}</div>
+      <div class="jn-module-tabs-title-subTitle">{{item.conf.sub}}</div>
+    </div>
+    <div class="jn-module-tabs-bar">
+      <div class="jn-module-tabs-bar-item" *ngFor="let tabItem of item.conf.items; let idx = index">
+        <div class="jn-module-tabs-bar-item-word" [ngClass]="{tabItemActive: (idx === tabActive)}" tappable (click)="activeClick(tabItem, idx)">{{tabItem.title}}</div>
+      </div>
+    </div>
+    <div class="jn-module-tabs-content">
+      <module-template [tempData]="tempData" [item]="tempConf"></module-template>
+    </div>
+</div>

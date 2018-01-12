@@ -1,0 +1,88 @@
+page-subject {
+  .subject-header {
+      width: 100%;
+      img {
+         width: 100%; 
+      }
+  }
+  ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
+  .toolbar-background-ios {
+      background: #fff;
+  }
+  .goods {
+      width: 100%;
+      background: #fff;
+      overflow-x: hidden;
+      border-bottom: 1px solid #F1F1F1;
+      margin-top: 1px;
+      display: flex;
+      flex-flow: row nowrap;
+      .goods-avatar {
+          width: 28.43%;
+          flex: 28.43%;
+          padding: 0.5rem;
+          img {
+              width: 100%;
+          }
+      }
+      .goods-content {
+          width: 71.57%;
+          flex: 71.57%;
+          padding: 0.5rem 0;
+          overflow: hidden;
+          .goods-content-name {
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+              color: #4D4D4D;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-sub {
+              font-size: 1rem;
+              margin-bottom: 0.8rem;
+              color: #888;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-tag {
+              font-size: 0.7rem;
+              width: 4.3rem;
+              text-align: center;
+              color: #ff9018;
+              border-radius: 5px;
+              height: 1.2rem;
+              line-height: 1.2rem;
+              border: 1px solid #ff9018;
+              margin-bottom: 0.5rem;
+              margin-right: 0.6rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-price {
+              font-size: 1.5rem;
+              color: #ff9018;
+              float: left;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-addcart {
+              float: right;
+              text-align: center;
+              margin-right: 2rem;
+              width: 2.5rem;
+              height: 2.5rem;
+              background: #ff9018;
+              color: #fff;
+              line-height: 2.5rem;
+              border-radius: 50%;
+          }
+      }
+  }
+}

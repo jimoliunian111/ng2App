@@ -1,0 +1,34 @@
+<ion-header class="search-header">
+  <div class="searchBox">
+    <div class="searchBox-back" (click)="goBack()"><i class="icon iconfont icon-arrowleft"></i></div>
+    <div class="searchBox-input"><input type="text" placeholder="想搜点啥" [(ngModel)]="keyword"></div>
+    <div class="searchBox-btn" (click)="searchBtn()">搜索</div>
+  </div>
+</ion-header>
+
+<ion-content class="search-content">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="正在刷新...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <div *ngIf="hotShow">
+    <div class="search-hot">
+      <span class="iconfont icon-hot"></span>
+      <span class="search-hotText">热门搜索</span>
+    </div>
+    <div class="search-hotContent">
+      <div class="search-hotItem" *ngFor="let item of hotKw" (click)="searchFromHot(item.content)">{{item.content}}</div>
+    </div>
+    <div class="search-history">
+      <span class="iconfont icon-shijian"></span>
+      <span class="search-historyText">搜索历史</span>
+    </div>
+    <div class="search-historyContent">
+      <div class="search-historyItem" *ngFor="let item of historyKw" (click)="searchFromHot(item)">{{item}}</div>
+    </div>
+    <div class="historyKw-clearBtn" *ngIf="historyKw && historyKw.length>0" (click)="clearHistory()">清空搜索历史</div>
+  </div>
+  <div *ngIf="!hotShow">
+    <jn-goodslist [goodsList]="searchList"></jn-goodslist>
+  </div>
+</ion-content>

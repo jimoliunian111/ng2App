@@ -1,0 +1,81 @@
+<ion-content *ngIf="userData">
+  <div class="profile-header">
+    <div class="profile-avatar">
+      <img src="../../assets/img/orange.png" />
+    </div>
+    <div class="profile-desc">
+      <div class="profile-title">{{userData.username}}<i class="icon iconfont icon-king"></i></div>
+      <div class="profile-subTitle">{{userData.nickname}}</div>
+    </div>
+
+  </div>
+  <div class="profile-grid-nav">
+    <div class="profile-grid-nav-item" tappable (tap)="goView('RechargeCardPage')">
+      <div class="profile-num">￥{{userData.recharge_money}}</div>
+      <div class="profile-text">充值卡</div>
+    </div>
+    <div style="width: 1px;height: 100%;background: #E6E6E6;"></div>
+    <div class="profile-grid-nav-item" tappable (tap)="goView('GiftPage')">
+      <div class="profile-num">00</div>
+      <div class="profile-text">可用红包</div>
+    </div>
+    <div style="width: 1px;height: 100%;background: #E6E6E6;"></div>
+    <div class="profile-grid-nav-item">
+      <div class="profile-num">000</div>
+      <div class="profile-text">卡券</div>
+    </div>
+  </div>
+  <div class="profile-order">
+    <div class="profile-cell" tappable (tap)="goView('OrderAllPage', {idx: 0})">
+      <div class="profile-cell-title">我的订单</div>
+      <div class="profile-cell-value">查看更多订单</div>
+      <div class="profile-cell-icon"><i class="icon iconfont icon-more"></i></div>
+    </div>
+    <div class="order-status">
+      <div class="orderStatus">
+        <div class="orderStatus-item" tappable (tap)="goView('OrderAllPage', {id: '0', idx: 1})">
+          <i class="icon iconfont icon-daifukuan order-status-icon"></i>
+          <div>待付款</div>
+        </div>
+        <div style="width: 1px;background: #f1f1f1;"></div>
+        <div class="orderStatus-item" tappable (tap)="goView('OrderAllPage', {id: '1', idx: 2})">
+          <i class="icon iconfont icon-daifahuo order-status-icon"></i>
+          <div>待发货</div>
+        </div>
+        <div style="width: 1px;background: #f1f1f1;"></div>
+        <div class="orderStatus-item" tappable (tap)="goView('OrderAllPage', {id: '3', idx: 3})">
+          <i class="icon iconfont icon-daishouhuo order-status-icon" style="transform: rotateY(180deg);"></i>
+          <div>配送中</div>
+        </div>
+        <div style="width: 1px;background: #f1f1f1;"></div>
+        <div class="orderStatus-item">
+          <i class="icon iconfont icon-ccgl-tuihuoguanli-4" style="font-size: 6vw;"></i>
+          <div>售后</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jn-cell-list">
+    <div class="profile-cell">
+      <div class="profile-cell-title">申请为商家用户</div>
+      <div class="profile-cell-value">待审核</div>
+      <div class="profile-cell-icon"><i class="icon iconfont icon-more"></i></div>
+    </div>
+    <div class="profile-cell" tappable (click)="goView('FavoritePage')">
+      <div class="profile-cell-title">我的收藏</div>
+      <div class="profile-cell-icon"><i class="icon iconfont icon-more"></i></div>
+    </div>
+    <div class="profile-cell">
+      <div class="profile-cell-title">店铺地址管理</div>
+      <div class="profile-cell-icon"><i class="icon iconfont icon-more"></i></div>
+    </div>
+    <div class="profile-cell" (tap)="goHelp()">
+      <div class="profile-cell-title">客服帮助</div>
+      <div class="profile-cell-icon"><i class="icon iconfont icon-more"></i></div>
+    </div>
+    <div class="profile-cell" tappable (click)="goView('SettingPage')">
+      <div class="profile-cell-title">设置</div>
+      <div class="profile-cell-icon"><i class="icon iconfont icon-more"></i></div>
+    </div>
+  </div>
+</ion-content>

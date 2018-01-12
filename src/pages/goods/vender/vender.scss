@@ -1,0 +1,111 @@
+page-vender {
+   ::-webkit-scrollbar {
+       width: 0;
+       height: 0;
+   }
+   .toolbar-background-ios {
+      background: #fff;
+  }
+  .scroll-content {
+      background: #fff;
+      padding: 0;
+  }
+
+  .goods {
+      width: 100%;
+      overflow-x: hidden;
+      border-bottom: 1px solid #F1F1F1;
+      margin-top: 1px;
+      display: flex;
+      background: #fff;
+      flex-flow: row nowrap;
+      .goods-avatar {
+          width: 20%;
+          flex: 20%;
+          padding: 8px;
+          img {
+              width: 100%;
+          }
+      }
+      .goods-content {
+          width: 80%;
+          flex: 80%;
+          text-indent: 5px;
+          overflow: inherit;
+          .goods-content-name {
+              font-size: 1.2rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+//            line-height: 1rem;
+          }
+          .goods-content-sub {
+              font-size: 1rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-tag {
+              font-size: 0.4rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-price {
+              font-size: 1.5rem;
+              margin-bottom: 8px;
+              float: left;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          .goods-content-addcart {
+              float: right;
+              margin-bottom: 8px;
+              margin-right: 2rem;
+              width: 2.5rem;
+              height: 2.5rem;
+              background: #ff9018;
+              color: #fff;
+              text-align: left;
+              line-height: 2.5rem;
+              border-radius: 50%;
+          }
+      }
+  }
+  .brand {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+  .subject {
+      width: 100%;
+      background: #fff;
+      overflow-x: hidden;
+      img {
+          width: rem(710);
+          border-radius: 20px;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 4vw;
+      }
+  }
+  .title {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+  .activity {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+
+
+}

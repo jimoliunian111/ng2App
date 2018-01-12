@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>登录</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goSignUp()">
+        注册
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content id="signInPage">
+  <img src="assets/img/orange.png" class="signLogo" />
+  <div class="login-content">
+    <div class="jn-input-item">
+      <div class="jn-input-icon">
+        <i class="iconfont icon-phone"></i>
+      </div>
+      <div class="jn-input-input-right">
+        <input type="text" placeholder="请输入手机号" [(ngModel)]="account.username" />
+      </div>
+    </div>
+    <div class="jn-input-item">
+      <div class="jn-input-icon">
+        <i class="iconfont icon-suo"></i>
+      </div>
+      <div class="jn-input-input-right">
+        <input type="password" placeholder="请输入密码" [(ngModel)]="account.password" />
+      </div>
+    </div>
+    <div class="jn-btn-large">
+      <button ion-button color="primary" block tappable (click)="doLogin()">登录</button>
+    </div>
+    <div class="login-other">
+      <div class="login-loginfor-code" (click)="loginForCode()">快捷登录</div>
+      <div class="login-login-forgey" (click)="loginForget()">忘记密码</div>
+    </div>
+
+  </div>
+
+</ion-content>

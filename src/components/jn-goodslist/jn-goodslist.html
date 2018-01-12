@@ -1,0 +1,10 @@
+<div class="jn-goodslist" *ngIf="goodsArr && goodsArr.length > 0">
+  <div *ngFor="let item of goodsArr">
+    <jn-product [item]="item"></jn-product>
+  </div>
+</div>
+<div class="jn-goodslist" *ngIf="goodsList && goodsList.length > 0">
+  <div *ngFor="let item of goodsList">
+    <jn-product [item]="item"></jn-product>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+city-list {
+  .jn-cityPage {
+  width: rem(750);
+  height: 100%;
+  overflow-x: hidden;
+  background: $color-white;
+}
+.jn-cityPage-header {
+  width: rem(750);
+  height: rem(88);
+  margin-bottom: rem(20);
+  line-height: rem(88);
+  /*border-bottom: 1px solid $color-border;*/
+  overflow: hidden;
+}
+.jn-header-close-cancel {
+  display: inline;
+  margin-left: rem(40);
+  margin-top: rem(24);
+  font-size: rem(32);
+  color: $color-title;
+}
+.jn-cityPage-title {
+  display: block;
+  width: rem(750);
+  height: rem(60);
+  line-height: rem(60);
+  text-indent: rem(40);
+  font-size: rem(28);
+  color: $color-title;
+  overflow: hidden;
+}
+.jn-cityPage-current-city {
+  display: block;
+  width: rem(670);
+  padding-bottom: rem(40);
+  margin: 0 auto;
+  margin-bottom: rem(20);
+  border-bottom: 1px solid $color-border;
+}
+.jn-cityPage-city-item {
+  display: block;
+  width: rem(208);
+  height: rem(66);
+  margin-top: rem(20);
+  margin-left: rem(5);
+  margin-right: rem(5);
+  /*margin-right: rem(12);*/
+  line-height: rem(68);
+  text-align: center;
+  font-size: rem(28);
+  color: $color-title;
+  border: 1px solid $color-border;
+  background: #FAFAFA;
+}
+.jn-cityPage-city-item:nth-child(odd) {
+  margin-left: rem(5);
+  margin-right: rem(5);
+}
+.jn-cityPage-city-list {
+  display: flex;
+  flex-flow: row wrap;
+  /*justify-content: space-between;*/
+  overflow: hidden;
+  width: rem(670);
+  margin: 0 auto;
+}
+.jn-cityPage-desc {
+  display: block;
+  width: rem(670);
+  margin: 0 auto;
+  margin-bottom: rem(60);
+  margin-top: rem(80);
+  line-height: rem(24);
+  text-align: center;
+  font-size: rem(24);
+  color: $color-subTitle;
+}
+.jn-cityPage-city-item:active {
+  color: $color-subTitle;
+  background: #FAFAFA;
+}
+}

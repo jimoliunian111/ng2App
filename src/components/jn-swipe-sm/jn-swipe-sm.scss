@@ -1,0 +1,51 @@
+jn-swipe-sm {
+    .jn-swipe-sm {
+        display: -webkit-box;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        width: rem(750);
+        padding: 0 rem(40);
+    }
+    .jn-swipe-sm-item {
+        width: rem(210) !important;
+        margin-right: rem(15);
+    }
+    .jn-swipe-sm-img-content {
+        width: rem(210);
+        height: rem(210);
+    }
+    .jn-swipe-sm-img-goods {
+        width: rem(210);
+    }
+    .jn-seipe-sm-desc {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .jn-seipe-sm-desc-left {
+        color: #FF5344;
+        font-size: rem(36);
+        line-height: rem(36);
+        span {
+            font-size: rem(24);
+        }
+    }
+    .jn-seipe-sm-desc-right {
+        line-height: rem(40);
+        font-size: rem(22);
+        color: #999999;
+    }
+    .jn-swipe-sm-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: rem(36);
+        max-height: 11vw;
+        font-size: rem(24);
+        color: #332500;
+    }
+}

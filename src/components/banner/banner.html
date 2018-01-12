@@ -1,0 +1,8 @@
+<!-- Generated template for the BannerComponent component -->
+<div style="width: 100%;height: 100%;">
+  <ion-slides style="height: auto;" *ngIf="bannersObj && bannersObj.conf && bannersObj.conf.items && bannersObj.conf.items.length > 0" (ionSlideDidChange)="slideChanged()">
+    <ion-slide *ngFor="let banner of bannersObj.conf.items">
+      <img src="{{banner.pic}}" tappable (click)="ItemClick(banner)"/>
+    </ion-slide>
+  </ion-slides>
+</div>

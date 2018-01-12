@@ -1,0 +1,99 @@
+page-search {
+    .searchBox {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 12.93vw;
+        background: #fff;
+        box-sizing: content-box;
+        line-height: 12.93vw;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .searchBox-back {
+        width: 11%;
+        flex: 11%;
+        text-align: center;
+        color: #4D4D4D;
+        font-size: 3.75vw;
+    }
+    .searchBox-back i {
+        font-size: 5.75vw;
+    }
+    .searchBox-input {
+        width: 76%;
+        flex: 76%;
+        height: 8.87vw;
+        padding: 2vw 0;
+    }
+    .searchBox-input input {
+        border: 0;
+        outline: medium;
+        height: 8.87vw;
+        width: 100%;
+        background: #f1f1f1;
+        display: block;
+        border-radius: 5px;
+        text-indent: 5vw;
+        color: #AAAAAA;
+        font-size: 4.5vw;
+    }
+    .searchBox-btn {
+        width: 13%;
+        flex: 13%;
+        text-align: center;
+        color: #4D4D4D;
+        font-size: 4vw;
+    }
+    .search-hot,
+    .search-history {
+        height: 9.38vw;
+        background: #F1F1F1;
+        line-height: 9.38vw;
+        padding: 0 3.86vw;
+    }
+    .search-hot span,
+    .search-history span {
+        font-size: 3.75vw;
+    }
+    .search-hotText,
+    .search-historyText {
+        color: #4D4D4D;
+        font-size: 3.75vw;
+    }
+    .search-hotContent,
+    .search-historyContent {
+        background: #fff;
+        padding: 3vw 3.86vw;
+        display: flex;
+        flex-flow: row wrap;
+        color: #4D4D4D;
+    }
+    .search-historyContent {
+        padding: 0 3.86vw;
+    }
+    .search-hotItem {
+        padding: 0.5vw 4vw;
+        font-size: 3.75vw;
+        border: 1px solid #4D4D4D;
+        border-radius: 2vw;
+        display: inline;
+        margin: 1vw;
+    }
+    .search-historyItem {
+        border-bottom: 1px solid #F1F1F1;
+        height: 10.93vw;
+        line-height: 10.93vw;
+        font-size: 3.75vw;
+        flex: 1 1 100%;
+    }
+    .historyKw-clearBtn {
+        margin: 15.62vw auto 0 auto;
+        width: 33.75vw;
+        height: 9.37vw;
+        border: 1px solid #777777;
+        text-align: center;
+        font-size: 3.75vw;
+        line-height: 9.37vw;
+        border-radius: 2vw;
+        color: #777777;
+    }
+}

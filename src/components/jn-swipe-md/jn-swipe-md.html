@@ -1,0 +1,16 @@
+<div class="jn-swipe-md">
+
+  <div class="jn-swipe-md-nav">
+    <div class="jn-swipe-md-title">{{item.conf.title || ''}}</div>
+    <div class="jn-swipe-md-nav-right-btn" *ngIf="item.conf.type && item.conf.type === 'brand' || item.conf.type === 'special'">
+              查看全部
+        <i class="icon iconfont icon-more"></i>
+    </div>
+  </div>
+  <div class="jn-swipe-img-wrap">
+    <div class="jn-swipe-md-item" *ngFor="let imgItem of item.conf.items; let idx = index" tappable (click)="ItemClick(imgItem)">
+      <img src="{{imgItem.pic}}" />
+    </div>
+  </div>
+
+</div>

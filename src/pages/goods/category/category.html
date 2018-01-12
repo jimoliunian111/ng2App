@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>分类</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="category">   <!--[ngClass]="{'category-side-actived': classActived === 0}"-->
+    <div class="category-left">
+      <div class="category-side" *ngFor="let side of cateMain;let idx = index" tappable (click)="sideClick(side ,idx)" [ngClass]="{'category-side-actived': classActived === idx}">{{side.cat_name}}</div>
+    </div>
+    <div class="category-main">
+      <div class="category-main-item" *ngFor="let sub of subCate;let subIdx = index" (click)="goReasult(sub)">
+        <div class="category-main-itemImg">
+          <img src="{{sub.category_logo}}" />
+        </div>
+        <div class="category-main-itemName">{{sub.cat_name}}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

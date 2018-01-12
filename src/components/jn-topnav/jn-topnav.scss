@@ -1,0 +1,62 @@
+jn-topnav {
+  .jn-module-topNav {
+  width: rem(750);
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  background: $color-white;
+}
+.jn-module-tabs-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: rem(750);
+  margin: 0 auto;
+  border-bottom: 1px solid $color-border;
+  background: $color-white;
+}
+.jn-module-tabs-bar-item {
+  display: block;
+  flex: 1;
+}
+.jn-module-tabs-bar-item-word {
+  max-width: rem(160);
+  height: rem(70);
+  margin: 0 auto;
+  line-height: rem(70);
+  text-align: center;
+  color: $color-title;
+}
+.tabItemActive {
+  color: $color-primary;
+  border-bottom:2px solid $color-primary;
+}
+.jn-module-tabs-content {
+  display: block;
+  width: rem(750);
+  overflow-x: hidden;
+  background: $color-white;
+}
+.jn-module-tabs-title {
+  display: block;
+  width: rem(750);
+  padding: rem(50) 0 rem(20) 0;
+  background: $color-white;
+}
+.jn-module-tabs-title-text {
+  text-indent: rem(40);
+  font-size: rem(38);
+  color: $color-title;
+}
+.jn-module-tabs-title-subTitle {
+  text-indent: rem(40);
+  font-size: rem(28);
+  color: $color-subTitle;
+}
+.hide {
+    display: none;
+}
+}

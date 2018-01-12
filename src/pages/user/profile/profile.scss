@@ -1,0 +1,140 @@
+page-profile {
+    .scroll-content {
+        background: $color-background;
+    }
+    .profile-header {
+        width: rem(750);
+        height: rem(280);
+        overflow: hidden;
+        background: url(../assets/img/bgcenter.png) no-repeat;
+        background-size: 100% 100%;
+        clear: both;
+    }
+    .profile-avatar {
+        width: rem(150);
+        height: rem(150);
+        margin-left: rem(50);
+        margin-top: rem(60);
+        float: left;
+        img {
+            width: 100%;
+        }
+    }
+    .profile-desc {
+        float: left;
+        width: rem(400);
+        margin-top: rem(80);
+        margin-left: rem(50);
+        line-height: rem(50);
+    }
+    .profile-title {
+        font-size: rem(32);
+        color: $color-white;
+    }
+    .profile-subTitle {
+        font-size: rem(32);
+        color: $color-white;
+    }
+    .profile-grid-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        clear: both;
+        width: rem(750);
+        height: rem(96);
+        line-height: rem(45);
+        border-bottom: 1px solid $color-border;
+        background: $color-white;
+    }
+    .profile-grid-nav-item {
+        flex: 1;
+        text-align: center;
+    }
+    .profile-num {
+        font-size: rem(32);
+        color: $color-title;
+    }
+    .profile-text {
+        font-size: rem(24);
+        color: $color-subTitle;
+    }
+    .profile-order {
+        width: rem(750);
+        border-top: rem(8) solid $color-background;
+        border-bottom: rem(8) solid $color-background;
+        background: $color-white;
+    }
+    .profile-cell {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: rem(750);
+        height: rem(90);
+        padding: 0 rem(40);
+        line-height: rem(90);
+        border-bottom: 1px solid $color-border;
+    }
+    .profile-cell-title {
+        width: rem(200);
+        font-size: rem(32);
+        color: $color-title;
+    }
+    .profile-cell-value {
+//      width: rem(400);
+        flex: 1;
+        text-align: right;
+        font-size: rem(32);
+        color: $color-subTitle;
+    }
+    .profile-cell-icon {
+        width: rem(30);
+    }
+    .order-status {
+        background: #fff;
+        padding-right: 0 !important;
+    }
+    .order-status a {
+        text-decoration: none;
+    }
+    .red-point {
+        position: absolute;
+        top: 10%;
+        left: 53%;
+    }
+    .order-status-icon {
+        font-size: 5.93vw;
+        color: #444;
+        text-align: center;
+    }
+    .orderStatus {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .orderStatus .orderStatus-item {
+        flex: 1;
+        text-align: center;
+        position: relative;
+        line-height: 6vw;
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+    }
+    .orderStatus i {
+        color: #4D4D4D;
+        font-size: 8vw;
+        display: block;
+    }
+    .orderStatus div {
+        font-size: 3.5vw;
+        color: #4d4d4d;
+    }
+    .jn-cell-list .profile-cell-title {
+        width: rem(200);
+        font-size: rem(32);
+        color: $color-title;
+    }
+    .jn-cell-list .profile-cell-value {
+        flex: 1;
+        text-align: right;
+        font-size: rem(32);
+        color: $color-subTitle;
+    }
+}

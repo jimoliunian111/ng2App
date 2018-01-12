@@ -1,0 +1,22 @@
+page-order-all {
+  .jn-order-tabs {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      width: rem(750);
+      height: rem(96);
+      background: #fff;
+  }
+  .jn-tab-btn {
+      flex: 1;
+      line-height: rem(96);
+      text-align: center;
+  }
+  .active {
+      color: $color-primary;
+      border-bottom: 1px solid $color-primary;
+  }
+}

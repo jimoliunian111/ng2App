@@ -1,0 +1,37 @@
+page-signup {
+  .jn-input-content {
+      width: rem(640);
+        margin: 0 auto;
+  }
+  .jn-input-item input {
+        width: 100%;
+        height: 90%;
+        border: 0;
+    }
+    .jn-input-item {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        height: rem(100);
+        line-height: rem(100);
+        border-bottom: 1px solid $color-border;
+    }
+    .jn-input-icon {
+        width: rem(60);
+        text-align: center;
+        i {
+            display: block;
+            font-size: rem(42);
+        }
+    }
+    .jn-input-input-right {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+    }
+    .jn-btn-large {
+        width: 100%;
+        margin-top: rem(60);
+    }
+}

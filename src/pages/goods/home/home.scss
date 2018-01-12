@@ -1,0 +1,44 @@
+page-home {
+  ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
+  .scroll-content {
+      background: #fff;
+      .swiper-slide img {
+          width: 100%;
+      }
+  }
+  .toolbar-background-ios {
+      background: #fff;
+  }
+
+  .brand {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+  .subject {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+  .title {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+  .activity {
+      width: 100%;
+      overflow-x: hidden;
+      img {
+          width: 100%;
+      }
+  }
+}

@@ -1,0 +1,8 @@
+<ion-content>
+  <div class="activity-page" *ngIf="activityObj">
+    <div class="backFab" tappable (click)="back()">
+      <i class="icon iconfont icon-arrowleft" id="noticeIcon"></i>
+    </div>
+    <img src="{{item.item_logo}}" *ngFor="let item of activityObj.list" tappable (click)="activityClick(item)"/>
+  </div>
+</ion-content>
