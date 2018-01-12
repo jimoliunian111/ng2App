@@ -2,12 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, Platform, Tabs, IonicPage } from 'ionic-angular';
 import { BackButtonService } from "../../services/backButton.service";
 
-//import { HomePage } from '../home/home';
-//import { CategoryPage } from '../category/category';
-//import { ProfilePage } from '../profile/profile';
-//import { CartPage } from '../cart/cart';
-//import { BrandListPage } from '../brand-list/brand-list';
-
 @IonicPage()
 @Component({
   selector: 'page-tabs',
@@ -15,6 +9,8 @@ import { BackButtonService } from "../../services/backButton.service";
 })
 export class TabsPage {
 @ViewChild('myTabs') tabRef: Tabs;
+  cartNum: number = 0
+
   tab1Root: any = 'HomePage';
   tab2Root: any = 'CategoryPage';
   tab3Root: any = 'VenderPage';

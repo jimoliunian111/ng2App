@@ -1,3 +1,29 @@
 page-setting {
-
+    .setting-logo {
+      width: rem(200);
+      margin: rem(120) auto 0 auto;
+      img {
+          width: 100%;
+      }
+    }
+    .setting-list {
+        width: 100%;
+        margin: rem(80) auto 0 auto;
+    }
+    .setting-list-item {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: rem(30) rem(40);
+        box-sizing: border-box;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .setting-list-item-title {
+      font-size: rem(32);
+    }
+    .setting-list-item-link {
+        font-size: rem(32);
+      }
 }
