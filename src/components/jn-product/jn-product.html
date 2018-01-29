@@ -2,7 +2,7 @@
   <div class="jn-product-item">
     <div class="jn-product-avatar" tappable (click)="goProduct(item)">
       <div class="jn-product-avatar-box">
-        <img src="{{item.goods_image}}" />
+        <img src="{{item.goods_image}}" #goodImg/>
         <div class="jn-product-maskForGoods" *ngIf="item.is_sale == 1 && item.goods_stock <= 0">已售罄</div>
         <div class="jn-product-maskForGoods" *ngIf="item.is_sale == 0">已下架</div>
       </div>

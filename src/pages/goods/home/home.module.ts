@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { HomePage} from './home';
 import { IonicPageModule } from 'ionic-angular';
 import { ModuleTemplateComponentModule } from '../../../components/module-template/module-template.module';

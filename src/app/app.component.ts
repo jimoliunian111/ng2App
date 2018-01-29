@@ -9,7 +9,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = 'TabsPage';
+//rootPage:any = 'GuidePage'; // 'TabsPage'
+  rootPage: any = localStorage.getItem('firstStart') ? 'TabsPage' : 'GuidePage';
   @ViewChild(Nav) nav: Nav;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, config: Config) {
     platform.ready().then(() => {

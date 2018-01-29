@@ -9,7 +9,6 @@ import { BackButtonService } from "../../services/backButton.service";
 })
 export class TabsPage {
 @ViewChild('myTabs') tabRef: Tabs;
-  cartNum: number = 0
 
   tab1Root: any = 'HomePage';
   tab2Root: any = 'CategoryPage';
@@ -17,7 +16,7 @@ export class TabsPage {
   tab4Root: any = 'CartPage';
   tab5Root: any = 'ProfilePage';
 
-
+  cartNum: number = 0
   constructor(public navCtrl: NavController,
               public backButtonService: BackButtonService,
               private platform: Platform) {
@@ -26,4 +25,5 @@ export class TabsPage {
         this.backButtonService.registerBackButtonAction(this.tabRef);
     });
   }
+
 }
