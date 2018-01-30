@@ -9,8 +9,9 @@ import { ApiProvider } from '../../providers/api/api';
 })
 export class JnProductComponent {
   @Input() item: any;
-  @ViewChild('goodImg')
-  goodImg = ElementRef
+  @ViewChild('goodImg') goodImg: ElementRef
+  flyFlag: Boolean = false
+
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public api: ApiProvider,
@@ -20,15 +21,17 @@ export class JnProductComponent {
   }
   showNum (item, $event) {
     console.log('点击的DOM元素', this.goodImg)
-    let params = {
-      itemId: item.item_id ? item.item_id : item.goods_id,
-      quantity: 1
-    }
-    this.api.GetAddCart(params).subscribe(res => {
-      console.log('666666666666666', res)
-      this.api.GetAddInfo({}).subscribe(res => {
-        console.log('购物车数量', res)
-      })
-    })
+    this.goodImg.Style
+    this.flyFlag = true
+//  let params = {
+//    itemId: item.item_id ? item.item_id : item.goods_id,
+//    quantity: 1
+//  }
+//  this.api.GetAddCart(params).subscribe(res => {
+//    console.log('666666666666666', res)
+//    this.api.GetAddInfo({}).subscribe(res => {
+//      console.log('购物车数量', res)
+//    })
+//  })
   }
 }

@@ -15,6 +15,8 @@ import { PublicFuncProvider } from '../providers/public-func/public-func';
 import { ModuleApiProvider } from '../providers/module-api/module-api';
 import { BackButtonService } from '../services/backButton.service';
 
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { BackButtonService } from '../services/backButton.service';
       tabsHighlight: true,
       swipeBackEnabled: true,
       tabsHideOnSubPages: true
-    })
+    }),
+    LazyLoadImageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -12,6 +12,7 @@ import { JnSwipeSmComponent } from './jn-swipe-sm/jn-swipe-sm';
 import { JnTabRankComponent } from './jn-tab-rank/jn-tab-rank';
 import { JnTopnavComponent } from './jn-topnav/jn-topnav';
 import { ModuleTemplateComponent } from './module-template/module-template';
+import { FlyCarComponent } from './fly-car/fly-car';
 
 export const components = [
 
@@ -29,7 +30,8 @@ export const components = [
 	  JnSwipeSmComponent,
 	  JnTabRankComponent,
 	  JnTopnavComponent,
-	  ModuleTemplateComponent
+	  ModuleTemplateComponent,
+    FlyCarComponent
 	],
 	imports: [IonicModule],
 	exports: [
@@ -44,7 +46,8 @@ export const components = [
 	  JnSwipeSmComponent,
 	  JnTabRankComponent,
 	  JnTopnavComponent,
-	  ModuleTemplateComponent
+	  ModuleTemplateComponent,
+    FlyCarComponent
 	]
 })
 export class ComponentsModule {}

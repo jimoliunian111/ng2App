@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-//import { Http } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 import { Api } from '../api';
 import { ModuleApiProvider } from '../module-api/module-api';
 import { AlertController, LoadingController  } from 'ionic-angular';
@@ -38,7 +37,7 @@ export class ApiProvider {
     tempConf: '/api/v2/app/get.template',
     tempConfData: '/api/v2/app/get.data'
   }
-  constructor(public http: HttpClient,
+  constructor(public http: Http,
               public api: Api,
               public alertCtrl: AlertController,
               public mApi: ModuleApiProvider,
