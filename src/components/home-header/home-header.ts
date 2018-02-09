@@ -56,8 +56,18 @@ export class HomeHeaderComponent {
       callBack: this.popParams
     })
   }
-  popParams (data) {
-    this.address = data
-    console.log('this.address', this.address)
+// popParams (data)  {
+//  console.log(this.cityAddress)
+//  this.address = data
+// }
+  popParams = (params) => {
+    return new Promise((resolve, reject) => {
+      if (typeof(params) !== 'undefined') {
+        this.address = params
+        resolve('ok')
+      } else {
+        reject(Error('error'))
+      }
+    })
   }
 }

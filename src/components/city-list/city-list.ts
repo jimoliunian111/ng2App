@@ -41,10 +41,19 @@ export class CityListComponent {
       console.log('6666', this.cityList)
     }, (err) => {});
   }
-  cityChoose(item) {
-    this.cityAddress = item.region_name
-    this.callback(item)
-    this.close()
+// cityChoose(item, event) {
+//  console.log('event', event)
+//  this.cityAddress = item.region_name
+//  this.callback(item)
+//  this.close()
+// }
+  cityChoose (item) {
+    this.callback(item).then((result) => {
+      console.log('回传成功', result)
+      this.navCtrl.pop()
+    }, err => {
+      console.log('回传失败', err)
+    })
   }
 
 }
