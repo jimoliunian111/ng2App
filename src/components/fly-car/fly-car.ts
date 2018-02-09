@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 /**
  * Generated class for the FlyCarComponent component.
@@ -11,12 +11,14 @@ import { Component } from '@angular/core';
   templateUrl: 'fly-car.html'
 })
 export class FlyCarComponent {
-
+  @Input() startStyle: any;
   text: string;
 
   constructor() {
     console.log('Hello FlyCarComponent Component');
     this.text = 'Hello World';
   }
-
+  emitClick () {
+    console.log('自定义事件激活')
+  }
 }

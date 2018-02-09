@@ -11,14 +11,19 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 export class HomeHeaderComponent {
   @Input() cityAddress: any;
   text: string;
+  address: any = {
+    region_name: '广州',
+    area_code: '020',
+    region_id: '104104101'
+  }
   barcode: any = new BarcodeScanner()
 
   constructor(public ApiProvider: ApiProvider,
               public alertCtrl: AlertController,
               public modalCtrl: ModalController,
               public navCtrl: NavController) {
-  }
 
+  }
   alert (obj) {
     let alert = this.alertCtrl.create({
       title: obj.title || '提示',
@@ -45,10 +50,14 @@ export class HomeHeaderComponent {
   goSearch () {
     this.navCtrl.push('SearchPage', {kw: ''})
   }
-  choseCity(myEvent) {
-    let modal = this.modalCtrl.create('CityListComponentModule');
-    modal.present({
-//    ev: myEvent
-    });
+  choseCity() {
+    this.navCtrl.push('CityListComponent', {
+      data: '测试传至',
+      callBack: this.popParams
+    })
+  }
+  popParams (data) {
+    this.address = data
+    console.log('this.address', this.address)
   }
 }

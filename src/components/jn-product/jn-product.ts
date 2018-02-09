@@ -1,6 +1,7 @@
 import { Component, Input, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api/api';
+import { FlyCarComponent } from '../fly-car/fly-car'
 //import { ProductPage } from '../../pages/product/product';
 
 @Component({
@@ -10,8 +11,9 @@ import { ApiProvider } from '../../providers/api/api';
 export class JnProductComponent {
   @Input() item: any;
   @ViewChild('goodImg') goodImg: ElementRef
-  flyFlag: Boolean = false
-
+  @ViewChild('fly') fly;
+  @ViewChild(FlyCarComponent) flyCar: FlyCarComponent;
+  startObj: any
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public api: ApiProvider,
@@ -20,9 +22,8 @@ export class JnProductComponent {
     this.navCtrl.push('ProductPage', {id: item.goods_id})
   }
   showNum (item, $event) {
-    console.log('点击的DOM元素', this.goodImg)
-    this.goodImg.Style
-    this.flyFlag = true
+    console.log('ssgoodImg', this.goodImg)
+//  this.flyCar.emitClick()
 //  let params = {
 //    itemId: item.item_id ? item.item_id : item.goods_id,
 //    quantity: 1

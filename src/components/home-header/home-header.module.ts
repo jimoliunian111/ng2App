@@ -7,6 +7,5 @@ import { CityListComponentModule } from '../city-list/city-list.module';
   declarations: [HomeHeaderComponent],
   imports: [IonicPageModule.forChild(HomeHeaderComponent), IonicModule, CityListComponentModule],
   exports: [HomeHeaderComponent]
-//schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class HomeHeaderComponentModule { }

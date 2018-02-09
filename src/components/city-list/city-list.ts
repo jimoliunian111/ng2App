@@ -14,19 +14,25 @@ import { ApiProvider } from '../../providers/api/api';
   templateUrl: 'city-list.html'
 })
 export class CityListComponent {
-  @Output() cityAddress: string = '广州'
-  //cityAddress: string = '广州';
+  cityAddress: string = '广州'
   cityList: any;
   text: string;
+  callback: any
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public ApiProvider: ApiProvider) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CityPopupPage');
+    this.init()
     this.getData()
   }
+  init () {
+    this.callback = this.navParams.data.callBack
+    this.text = this.navParams.data.data
+  }
   close() {
-    this.viewCtrl.dismiss();
+    this.navCtrl.pop()
   }
   getData() {
     this.ApiProvider.GetCommonDate({}).subscribe((resp) => {
@@ -37,6 +43,7 @@ export class CityListComponent {
   }
   cityChoose(item) {
     this.cityAddress = item.region_name
+    this.callback(item)
     this.close()
   }
 
